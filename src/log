@@ -1,3 +1,4 @@
+Log
 21:18:06,841 INFO  [org.jboss.as.repository] (management-handler-thread - 1) WFLYDR0001: Content added at location E:\GeekBrain\JavaEE\wildfly-21.0.0.Final\standalone\data\content\2f\841f6d1aa97129909e246473b372a426ac0350\content
 21:18:06,873 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "first-javaee-web-app.war" (runtime-name: "first-javaee-web-app.war")
 21:18:07,610 INFO  [org.infinispan.CONTAINER] (ServerService Thread Pool -- 78) ISPN000128: Infinispan version: Infinispan 'Corona Extra' 11.0.4.Final
