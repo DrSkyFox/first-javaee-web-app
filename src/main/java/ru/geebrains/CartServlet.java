@@ -17,15 +17,13 @@ public class CartServlet extends HttpServlet {
     private static Logger logger = LoggerFactory.getLogger(CartServlet.class);
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
+
         response.getWriter().println("<title>Cart Page</title>");
         response.getWriter().println("<h1>This is Cart Page</h1>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/main'>Main Page</a></li>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/catalog'>Catalog Page</a></li>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/product'>Product Page</a></li>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/cart'>Cart Page</a></li>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/order'>Order Page</a></li>");
-        response.getWriter().println("</ul>");
+        getServletContext().getRequestDispatcher("/page_header").include(request,response);
+        response.getWriter().println("<p>SomeText</p>");
     }
 
     @Override

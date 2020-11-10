@@ -16,15 +16,11 @@ public class MainServlet extends HttpServlet {
     private static Logger logger = LoggerFactory.getLogger(MainServlet.class);
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.getWriter().println("<title>Main Page</title>");
-        response.getWriter().println("<h1>This is Main Page</h1>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/main'>Main Page</a></li>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/catalog'>Catalog Page</a></li>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/product'>Product Page</a></li>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/cart'>Cart Page</a></li>");
-        response.getWriter().println("<li><a href='"+request.getContextPath() +"/order'>Order Page</a></li>");
-        response.getWriter().println("</ul>");
+        response.getWriter().println("<h1>Hello From Main Page</h1>");
+        getServletContext().getRequestDispatcher("/page_header").include(request,response);
+        response.getWriter().println("<p>SomeText</p>");
     }
 
     @Override
