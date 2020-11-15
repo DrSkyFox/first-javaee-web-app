@@ -3,7 +3,6 @@ package ru.geebrains.database_demo;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 public class ToDoRepository {
@@ -54,7 +53,7 @@ public class ToDoRepository {
         else return new ToDo(-1, "null", LocalDate.now());
     }
 
-    public List<ToDo> findAll() throws SQLException {
+    public List<ToDo> findAll() {
         return toDos;
     }
 
