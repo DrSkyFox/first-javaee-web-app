@@ -20,8 +20,8 @@ public class ProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.getWriter().println("<title>Product Page</title>");
         response.getWriter().println("<h1>This is Product Page</h1>");
-        getServletContext().getRequestDispatcher("/page_header").include(request,response);
-        response.getWriter().println("<p>SomeText</p>");
+        getServletContext().getRequestDispatcher("/WEB-INF/product.jsp").forward(request,response);
+//        response.getWriter().println("<p>SomeText</p>");
 
     }
 

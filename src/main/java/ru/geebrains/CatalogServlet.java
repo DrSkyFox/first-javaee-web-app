@@ -20,7 +20,7 @@ public class CatalogServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.getWriter().println("<title>Catalog</title>");
         response.getWriter().println("<h1>This is Catalog</h1>");
-        getServletContext().getRequestDispatcher("/page_header").include(request,response);
+        getServletContext().getRequestDispatcher("/WEB-INF/catalog.jsp").forward(request,response);
         response.getWriter().println("<p>SomeText</p>");
 
     }

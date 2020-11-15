@@ -14,14 +14,7 @@ public class HeaderServlet extends HttpServlet {
         resp.getWriter().println("<ling rel='stylesheet' href ='"+ req.getContextPath()+ "/style.css'>");
 
         String header = (String) req.getAttribute("header");
-
-        resp.getWriter().println("<li><a href='"+req.getContextPath() +"/main'>Main Page</a></li>");
-        resp.getWriter().println("<li><a href='"+req.getContextPath() +"/catalog'>Catalog Page</a></li>");
-        resp.getWriter().println("<li><a href='"+req.getContextPath() +"/product'>Product Page</a></li>");
-        resp.getWriter().println("<li><a href='"+req.getContextPath() +"/cart'>Cart Page</a></li>");
-        resp.getWriter().println("<li><a href='"+req.getContextPath() +"/order'>Order Page</a></li>");
-        resp.getWriter().println("</ul>");
-
+        getServletContext().getRequestDispatcher("/WEB-INF/menu.jsp").include(req,resp);
 
     }
 }

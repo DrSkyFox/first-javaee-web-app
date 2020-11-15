@@ -22,8 +22,8 @@ public class CartServlet extends HttpServlet {
 
         response.getWriter().println("<title>Cart Page</title>");
         response.getWriter().println("<h1>This is Cart Page</h1>");
-        getServletContext().getRequestDispatcher("/page_header").include(request,response);
-        response.getWriter().println("<p>SomeText</p>");
+        getServletContext().getRequestDispatcher("/WEB-INF/cart.jsp").forward(request,response);
+
     }
 
     @Override

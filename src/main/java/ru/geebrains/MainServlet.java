@@ -19,7 +19,7 @@ public class MainServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.getWriter().println("<title>Main Page</title>");
         response.getWriter().println("<h1>Hello From Main Page</h1>");
-        getServletContext().getRequestDispatcher("/page_header").include(request,response);
+        getServletContext().getRequestDispatcher("/WEB-INF/main.jsp").forward(request,response);
         response.getWriter().println("<p>SomeText</p>");
     }
 

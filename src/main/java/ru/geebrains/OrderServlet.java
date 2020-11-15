@@ -20,8 +20,8 @@ public class OrderServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.getWriter().println("<title>Order Page</title>");
         response.getWriter().println("<h1>This is Order Page</h1>");
-        getServletContext().getRequestDispatcher("/page_header").include(request,response);
-        response.getWriter().println("<p>SomeText</p>");
+        getServletContext().getRequestDispatcher("/WEB-INF/order.jsp").forward(request,response);
+//        response.getWriter().println("<p>SomeText</p>");
 
     }
 
